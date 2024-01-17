@@ -163,20 +163,26 @@ const SearchZone = () =>{
       "locY": selectHover[0].locationY
     });
     setDustCity(matchCity[0].countyItem);
-    setMedium1(matchCity[0].mediumCode1);
+    setMedium1(matchCity[0].mediumCode);
     setMedium2(matchCity[0].mediumCode2);
   }
 
   const clickCity = () =>{
+    console.log(cityIndex);
+    console.log(cityXY);
+    console.log(dustCity);
+    console.log(matchCity[cityIndex].mediumCode1);
+    console.log(matchCity[cityIndex].mediumCode2);
     searchCity();
   }
 
   const searchCity = () => {
     setLoading(loading());
+    console.log(cityXY);
+    console.log(dustCity);
+    console.log(matchCity[cityIndex]);
     if((matchCity[cityIndex] && cityXY && medium1 && medium2 && dustCity) !== null && (matchCity[cityIndex] && cityXY && medium1 && medium2 && dustCity) !== undefined ){
-      // console.log(cityXY);
-      // console.log(dustCity);
-      // console.log(matchCity[cityIndex]);
+      console.log("왔옹");
       let queryParams = '';
       const serviceKey = process.env.REACT_APP_SERVICE_KEY;
       const url = 'http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst'; /*URL*/
