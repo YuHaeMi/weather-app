@@ -125,7 +125,7 @@ const SearchZone = () =>{
         break;
       case "Enter":
         // console.log(cityXY);
-        if(cityXY !== null){
+        if(cityXY !== null && inputTxt.length !== parseInt(1)){
           searchCity();
         }else{
           setInfoPopS(infoPop());

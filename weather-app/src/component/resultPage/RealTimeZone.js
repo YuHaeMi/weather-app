@@ -2,7 +2,6 @@ import { React, useState, useEffect, useRef } from "react";
 import sun from '../../img/sun.gif';
 import cloud_sun from '../../img/cloud_sun.gif';
 import cloud from '../../img/cloud.gif';
-import rainSnow from '../../img/rain.gif';
 import rain from '../../img/rain.gif';
 import snow from '../../img/snow.gif';
 
@@ -15,9 +14,10 @@ const RealTimeZone = (props) =>{
   const [feelTmp, setFeelTmp] = useState();
   const [pm10Data, setPm10Data] = useState();
   const [skySetting, setSkySetting] = useState({sky1:"맑음", sky3:"구름많음", sky4:"흐림", pty1:"비", pty2:"비/눈", pty3:"눈", pty4:"소나기"});
-  const [skyImg, setSkyImg] = useState({sky1:sun, sky3:cloud_sun, sky4:cloud, pty1:rain, pty2:rainSnow, pty3:snow, pty4:rain});
+  const [skyImg, setSkyImg] = useState({sky1:sun, sky3:cloud_sun, sky4:cloud, pty1:rain, pty2:rain, pty3:snow, pty4:rain});
   const [skyState, setSkyState] = useState("");
   const [skyImgStr, setSkyImgStr] = useState("");
+  
   useEffect(()=>{
     if(props.nowData !== null){
       if((props.nowData.cityName||props.nowData.now) !== undefined){
@@ -33,11 +33,11 @@ const RealTimeZone = (props) =>{
         setNowReh(props.nowData.now.rehD);
         setPm10Data(props.nowData.now.pm10D);
 
-        if(pty === 0){
-          setSkyState(skySetting[`sky${sky}`]);
-          setSkyImgStr(skyImg[`sky${sky}`]);
-        }else{
+        if(pty !== 0){
           setSkyState(skySetting[`pty${pty}`]);
+          setSkyImgStr(skyImg[`pty${pty}`]);
+        }else{
+          setSkyState(skySetting[`sky${sky}`]);
           setSkyImgStr(skyImg[`sky${sky}`]);
         }
 
@@ -57,9 +57,9 @@ const RealTimeZone = (props) =>{
         /*-- 체감온도 end --*/
       }
     }
-  },[props.nowData]);
+  },[props.nowData,skyImg,skySetting]);
   useEffect(()=>{
-  },[nowCity,nowTmp,nowTmn,nowTmx,nowReh,feelTmp,skySetting,skyState,pm10Data,skyImg,skyImgStr]);
+  },[nowCity,nowTmp,nowTmn,nowTmx,nowReh,feelTmp,pm10Data,skyState,skyImgStr]);
   return (
     <div className="realTimeZone">
       <section className="nameZone">

@@ -24,7 +24,7 @@ const DateWeatherZone = (props) =>{
       // console.log(nextDay2);
       
       const weekData = props.weekData;
-      console.log(weekData.weekD10);
+      // console.log(weekData.weekD10);
       let day3Array = [];
       let skyState = '';
       setDay3Data(

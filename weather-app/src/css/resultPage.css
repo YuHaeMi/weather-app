@@ -37,6 +37,7 @@
   color: #fff;
   font-size: 3rem;
   font-family: 'NeoDunggeunmo';
+  text-shadow: -1px 0px #337eb636, 1px 3px #337eb636, 1px 0px #337eb636, 2px 2px #337eb636;
 }
 .commentZone{
   width: 100%;
@@ -96,6 +97,7 @@
   font-size: 1.5rem;
   color: #fff;
   font-family: 'NeoDunggeunmo';
+  text-shadow: -1px 0px #337eb636, 1px 3px #337eb636, 1px 0px #337eb636, 2px 2px #337eb636;
 }
 /*실시간 끝*/
 
