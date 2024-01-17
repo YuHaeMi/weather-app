@@ -28,12 +28,12 @@ const SearchZone = () =>{
   const [dustCity, setDustCity] = useState(""); //미세먼지용 도시
   const [loadingPop, setLoading] = useState();
   const [infoPopS, setInfoPopS] = useState();
-  
+  const [randomPop, setRandomPop] = useState([sun,cloud_sun,cloud,rainSnow,rain,snow]); 
   const loading = () =>{
     return(
       <div className="loadingBackground">
         <div className="loadingPopup">
-          <img src={ sun }/>
+          <img src={ randomPop[Math.floor(Math.random()*6)] }/>
           <p className="loadingP">날씨를 가져오는 중입니다.</p>
         </div>
       </div>
@@ -125,7 +125,7 @@ const SearchZone = () =>{
         break;
       case "Enter":
         // console.log(cityXY);
-        if(cityXY !== null && inputTxt.length !== parseInt(1)){
+        if(cityXY !== null && !matchCity.includes(inputTxt)){
           searchCity();
         }else{
           setInfoPopS(infoPop());
@@ -168,19 +168,14 @@ const SearchZone = () =>{
   }
 
   const clickCity = () =>{
-    console.log(cityIndex);
-    console.log(cityXY);
-    console.log(dustCity);
-    console.log(matchCity[cityIndex].mediumCode1);
-    console.log(matchCity[cityIndex].mediumCode2);
     searchCity();
   }
 
   const searchCity = () => {
     setLoading(loading());
-    console.log(cityXY);
-    console.log(dustCity);
-    console.log(matchCity[cityIndex]);
+    // console.log(cityXY);
+    // console.log(dustCity);
+    // console.log(matchCity[cityIndex]);
     if((matchCity[cityIndex] && cityXY && medium1 && medium2 && dustCity) !== null && (matchCity[cityIndex] && cityXY && medium1 && medium2 && dustCity) !== undefined ){
       console.log("왔옹");
       let queryParams = '';
@@ -242,7 +237,7 @@ const SearchZone = () =>{
     }
   }
   useEffect(()=>{
-  },[loadingPop,infoPopS]);
+  },[loadingPop,infoPopS,randomPop]);
 
   useEffect(()=>{
     if(deleteLi.current !== undefined && deleteLi.current !== null){
