@@ -4,6 +4,13 @@ import "../../css/searchPage.css";
 import axios from "axios";
 import shortLocation from "../../js/shortLocation.json";
 
+import sun from '../../img/sun.gif';
+import cloud_sun from '../../img/cloud_sun.gif';
+import cloud from '../../img/cloud.gif';
+import rainSnow from '../../img/rain.gif';
+import rain from '../../img/rain.gif';
+import snow from '../../img/snow.gif';
+
 const SearchZone = () =>{
   const [inputTxt, setInputTxt] = useState(""); // 검색창 입력
   const [cityData, setCityData] = useState(shortLocation); // 도시정보
@@ -19,6 +26,32 @@ const SearchZone = () =>{
   const [dustDate1, setDustDate1] = useState(""); 
   const [dustDate2, setDustDate2] = useState(""); 
   const [dustCity, setDustCity] = useState(""); //미세먼지용 도시
+  const [loadingPop, setLoading] = useState();
+  const [infoPopS, setInfoPopS] = useState();
+  
+  const loading = () =>{
+    return(
+      <div className="loadingBackground">
+        <div className="loadingPopup">
+          <img src={ sun }/>
+          <p className="loadingP">날씨를 가져오는 중입니다.</p>
+        </div>
+      </div>
+    )
+  }
+  
+  const infoPop = () =>{
+    return(
+      <div className="loadingBackground">
+        <div className="loadingPopup">
+          <p className="loadingP">검색을 바르게 해주세요</p>
+          <button className="closeBtn" onClick={ ()=>{setInfoPopS(null)} }>닫기</button>
+        </div>
+      </div>
+    )
+  }
+
+
   const searchInput = (e) =>{
     setInputTxt(e.target.value);
   }
@@ -92,7 +125,11 @@ const SearchZone = () =>{
         break;
       case "Enter":
         // console.log(cityXY);
-        searchCity();
+        if(cityXY !== null){
+          searchCity();
+        }else{
+          setInfoPopS(infoPop());
+        }
         break;
       default:
         // console.log(matchCity[countNum]);
@@ -135,6 +172,7 @@ const SearchZone = () =>{
   }
 
   const searchCity = () => {
+    setLoading(loading());
     if((matchCity[cityIndex] && cityXY && medium1 && medium2 && dustCity) !== null && (matchCity[cityIndex] && cityXY && medium1 && medium2 && dustCity) !== undefined ){
       // console.log(cityXY);
       // console.log(dustCity);
@@ -197,6 +235,8 @@ const SearchZone = () =>{
       })();
     }
   }
+  useEffect(()=>{
+  },[loadingPop,infoPopS]);
 
   useEffect(()=>{
     if(deleteLi.current !== undefined && deleteLi.current !== null){
@@ -211,6 +251,8 @@ const SearchZone = () =>{
 
   return (
     <div className="searchZoneWrap">
+      { infoPopS? infoPopS:null }
+      { loadingPop? loadingPop:null }
       <div>
         <input 
         className="searchZoneInput" 

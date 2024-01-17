@@ -24,7 +24,7 @@ const DateWeatherZone = (props) =>{
       // console.log(nextDay2);
       
       const weekData = props.weekData;
-      // console.log(weekData.weekD10);
+      console.log(weekData.weekD10);
       let day3Array = [];
       let skyState = '';
       setDay3Data(
@@ -83,7 +83,7 @@ const DateWeatherZone = (props) =>{
             case "흐림":
               weekSky.push(skySetting[`sky4`]);
               break;
-            case "비":
+            case "흐리고 비":
               weekSky.push(skySetting[`pty1`]);
               break;
             case "비/눈":

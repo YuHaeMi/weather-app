@@ -1,9 +1,10 @@
 import { React, useState, useEffect, useRef } from "react";
-import sun from '../../img/sun.png';
-import cloud_sun from '../../img/cloud_sun.png';
-import cloud from '../../img/cloud.png';
-import rain from '../../img/rain.png';
-import snow from '../../img/snow.png';
+import sun from '../../img/sun.gif';
+import cloud_sun from '../../img/cloud_sun.gif';
+import cloud from '../../img/cloud.gif';
+import rainSnow from '../../img/rain.gif';
+import rain from '../../img/rain.gif';
+import snow from '../../img/snow.gif';
 
 const RealTimeZone = (props) =>{
   const [nowCity, setNowCity] = useState();
@@ -14,7 +15,7 @@ const RealTimeZone = (props) =>{
   const [feelTmp, setFeelTmp] = useState();
   const [pm10Data, setPm10Data] = useState();
   const [skySetting, setSkySetting] = useState({sky1:"맑음", sky3:"구름많음", sky4:"흐림", pty1:"비", pty2:"비/눈", pty3:"눈", pty4:"소나기"});
-  const [skyImg, setSkyImg] = useState({sky1:sun, sky3:cloud_sun, sky4:cloud, pty1:rain, pty2:rain, pty3:snow, pty4:rain});
+  const [skyImg, setSkyImg] = useState({sky1:sun, sky3:cloud_sun, sky4:cloud, pty1:rain, pty2:rainSnow, pty3:snow, pty4:rain});
   const [skyState, setSkyState] = useState("");
   const [skyImgStr, setSkyImgStr] = useState("");
   useEffect(()=>{

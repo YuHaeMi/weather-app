@@ -23,6 +23,50 @@
 /*SearchPage end*/
 
 /*SearchZone start*/
+.loadingBackground{
+  /* transform: scale(0); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000004b;
+}
+.loadingPopup{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.loadingP{
+  font-size: 2rem;
+  font-family: 'NeoDunggeunmo';
+  padding: 1rem;
+  text-align: center;
+}
+.closeBtn{
+  cursor: pointer;
+  border-radius: 1rem;
+  text-align: center;
+  width: 10rem;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  font-family: 'NeoDunggeunmo';
+  background-color: #fff;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+}
+.closeBtn:active{
+  background: #c8c8c8;
+  color: #fff;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
 .searchZoneWrap{
   width: 100%;
   height: 50%;
