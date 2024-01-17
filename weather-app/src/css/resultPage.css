@@ -1,0 +1,345 @@
+.resultWrap{
+  width: 50vw;
+  min-width: 50rem;
+  max-width: 60rem;
+  height: 80rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 2rem 0rem 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 15px -7px rgba(0,0,0,0.2);
+}
+/*실시간 시작*/
+.realTimeZone{
+  width: 90%;
+  height: 43rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  background:linear-gradient(143deg, #b9d1ff 5%, #91b7ff 38%, #5591ff);
+  box-shadow: 0px 8px 20px -9px rgba(0,0,0,0.3);
+}
+.nameZone{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nameZone>p{
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'NeoDunggeunmo';
+}
+.commentZone{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weatherImg{
+  width: 16rem;
+  height: 16rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weatherImg>img{
+  display: block;
+  width: 100%;
+}
+.commentZone>p{
+  font-size: 2.6rem;
+  color: #fff;
+  font-family: 'NeoDunggeunmo';
+}
+.infoZone{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.infoZone>article:nth-of-type(1){
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  width: 90%;
+  /* background-color: rgba(0, 0, 0, 0.128); */
+  /* border-radius: 1rem; */
+  border-top: 1px solid #ffffff6e;
+}
+.infoZone>article:nth-of-type(1)>div{
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+.infoZone>article:nth-of-type(1)>div>p{
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: 'NeoDunggeunmo';
+}
+/*실시간 끝*/
+
+/*시간별 시작*/
+.hoursZone{
+  width: 90%;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hoursWrap{
+  width: 90%;
+}
+.todayWrap{
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.todayWrap>p{
+  font-family: 'NeoDunggeunmo';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.todayWrap>p>span:nth-of-type(1){
+  font-size: 2.3rem;
+  color: #333;
+}
+.todayWrap>p>span:nth-of-type(2){
+  font-size: 1.3rem;
+  color: #3333337e;
+}
+.timeWrap{
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  padding: 1.3rem 0rem 1.3rem 0rem;
+}
+.timeWrap::-webkit-scrollbar{
+  display: none;
+}
+.timeWrap>div:nth-of-type(1){
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.timeWrapDiv{
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 3px 15px -5px rgba(0,0,0,0.2);
+  border-radius: 5rem;
+  padding: 0.5rem;
+}
+.timeWrapDivBackground{
+  background: linear-gradient(143deg, #b9d1ff 5%, #91b7ff 38%, #5591ff);
+  box-shadow: 0px 3px 15px -5px rgba(0,0,0,0.2);
+  border-radius: 5rem;
+  padding: 0.5rem;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timeWrap>div:nth-of-type(1)>div>p{
+  font-size: 1.3rem;
+  font-family: 'NeoDunggeunmo';
+}
+.timeWrap>div:nth-of-type(1)>div>div{
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timeWrap>div:nth-of-type(1)>div>div>img{
+  display: block;
+  width: 100%;
+}
+/*시간별 끝*/
+
+/*주간별 시작*/
+.dateWeatherZone{
+  width: 90%;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dateWrap{
+  width: 90%;
+}
+.weekWrap{
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.weekWrap>p{
+  font-family: 'NeoDunggeunmo';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.weekWrap>p>span:nth-of-type(1){
+  font-size: 2.3rem;
+  color: #333;
+}
+.weekWrap>p>span:nth-of-type(2){
+  font-size: 1.3rem;
+  color: #3333337e;
+}
+.dayWrap{
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 1.3rem 0rem 1.3rem 0rem;
+  scrollbar-width: none;
+}
+.dayWrap::-webkit-scrollbar{
+  display: none;
+}
+.day3Zone,.weekZone{
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.day3Zone>div:nth-of-type(1){
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0px 3px 15px -5px rgba(0,0,0,0.2);
+}
+.day3Zone>div:nth-of-type(1)>p{
+  width: 85%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-family: 'NeoDunggeunmo';
+}
+.day3Zone>div:nth-of-type(1)>div{
+  width: 8.3rem;
+  height: 6rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.day3Zone>div:nth-of-type(1)>div>img{
+  display: block;
+  width: 65%;
+}
+.weekZone>div:nth-of-type(1){
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0px 3px 15px -5px rgba(0,0,0,0.2);
+}
+.weekZone>div:nth-of-type(1)>p{
+  width: 85%;
+  font-size: 1.3rem;
+  font-family: 'NeoDunggeunmo';
+  text-align: center;
+}
+
+.weekDayDate>span{
+  font-size: 1.3rem;
+}
+.tmpZone{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tmpZone>span{
+  font-size: 1.3rem;
+  font-family: 'NeoDunggeunmo';
+}
+.weekZone>div:nth-of-type(1)>div{
+  width: 8.3rem;
+  height: 6rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.weekZone>div:nth-of-type(1)>div>img{
+  display: block;
+  width: 65%;
+}
+/*주간별 끝*/
+@media (max-width: 550px){
+  .resultWrap{
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0rem;
+    overflow: hidden;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
