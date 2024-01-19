@@ -8,7 +8,7 @@
 ## 기능 설명
 
 - 메인 검색 화면
-<img width="323" alt="image" src="https://github.com/YuHaeMi/weather-app/assets/113071904/07ff750c-33aa-48a9-9f7a-abc28ebe24a4">
+<p><img width="323" alt="image" src="https://github.com/YuHaeMi/weather-app/assets/113071904/07ff750c-33aa-48a9-9f7a-abc28ebe24a4"></p>
   - input에 날씨를 알고 싶은 도시 입력 시 해당 글자가 모두 포함되는 드롭 앤 다운 형식의 메뉴 형성
   - 마우스, 키보드 조작 가능 (마우스는 click, 키보드는 enter를 누르면 검색이 실행)
   - 잘못된 형식을 입력 후 키보드로 enter 입력 시 경고 팝업 생성
@@ -16,7 +16,7 @@
 
 
 - 결과 화면
-<img width="407" alt="image" src="https://github.com/YuHaeMi/weather-app/assets/113071904/42e0f0dd-b73e-4eda-aaab-c8c8a80116d9">
+<p><img width="407" alt="image" src="https://github.com/YuHaeMi/weather-app/assets/113071904/42e0f0dd-b73e-4eda-aaab-c8c8a80116d9"></p>
   - 실시간 날씨
     - 단기 데이터의 현재 날짜&시간의 데이터를 가져와 화면에 출력
     - 미세먼지 데이터도 마찬가지(기준: 0~30 좋음, 31~80 보통, 81~150 나쁨 151 매우 나쁨)
